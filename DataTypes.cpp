@@ -1,10 +1,11 @@
 #include <iostream>
-
+#include <iomanip> // iomanip library is used for input/output manipulators, such as setprecision
 // Functions is also a derived datatype
-int add(int a, int b)
+std::string add(int a, int b)
 {
-    return a + b;
-};
+    std:: cout << "Function started" << "\nAdding given numbers: " << a << " and " << b << std::endl;
+    return "Restult: " + std::to_string(a + b);
+}
 
 int main()
 {
@@ -14,7 +15,6 @@ int main()
     short k = 25;
     long h = 5000;
     long long ll = 500000000;
-
     std::cout << "____Integers____" << std::endl;
     std::cout << "a: " << a << std::endl
               << "l: " << l << std::endl;
@@ -27,14 +27,16 @@ int main()
     long double ldf = 12.1321546789846216546521;
 
     std::cout << "____Float____" << std::endl;
-    std::cout << "b: " << b << std::endl
-              << "df: " << df << std::endl
-              << "ldf: " << ldf << std::endl;
+    std::cout << "b: " << b << std::endl << "df: " << df << std::endl;
+    // by default we get 6 digits for the float  in the output
+    // we can change it by using the setprecision() manipulator from the iomanip library
+    std::cout << std::fixed << std::setprecision(10);
+    std::cout << "ldf: " << ldf << std::endl;
 
     char ch = 'A';
-    wchar_t letter;
-    char16_t c16;
-    char32_t c32;
+    wchar_t letter=L'B';
+    char16_t c16=U'A';
+    char32_t c32=U'C';
 
     std::cout << "____Char____" << std::endl;
     std::cout << "ch: " << ch << std::endl
@@ -72,6 +74,8 @@ int main()
     using Health=int; // It's like alias
     // String is a user-defined(class) datatype in the std library
     std::string st = "Hello";
+    std::cout << "____function____" << std::endl;
+    std::cout << add(10,20) << std::endl;
 
 
     return 0;

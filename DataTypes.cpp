@@ -33,16 +33,16 @@ int main()
     std::cout << std::fixed << std::setprecision(10);
     std::cout << "ldf: " << ldf << std::endl;
 
-    char ch = 'A';
-    wchar_t letter=L'B';
-    char16_t c16=U'A';
-    char32_t c32=U'C';
+    // char ch = 'A';
+    // wchar_t letter=L'B';
+    // char16_t c16=U'A';
+    // char32_t c32=U'C';
 
-    std::cout << "____Char____" << std::endl;
-    std::cout << "ch: " << ch << std::endl
-              << "letter: " << letter << std::endl
-              << "c16: " << c16 << std::endl;
-    std::cout << "c32: " << c32 << std::endl;
+    // std::cout << "____Char____" << std::endl;
+    // std::cout << "ch: " << ch << std::endl
+    //           << "letter: " << letter << std::endl
+    //           << "c16: " << c16 << std::endl;
+    // std::cout << "c32: " << c32 << std::endl;
 
     bool alive = true, is_dead = false;
     // void; no value

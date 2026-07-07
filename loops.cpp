@@ -32,5 +32,22 @@ int main() {
     } while (true);
 
 
+    int sum = 0, val;
+    std::cout << "Enter the number with separated by space: ";
+    
+    while(std::cin >> val){
+        sum = sum + val;
+    }
+    
+    std::cout << "Total sum: " << sum << std::endl;
+
+    std::string str[] = {"Hello","Just","nothing","to","say"};
+    std::cout << "Printing the string array using for loop: " << std::endl;
+    for (const auto& s:str) {
+        std::cout << s << " ";
+    }
+    std::cout << std::endl;
+
+
     return 0;
 }
